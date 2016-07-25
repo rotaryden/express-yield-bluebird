@@ -28,11 +28,13 @@ app.get('/users', function* (req, res) {
 ```
 
 ### To define global 'Promise' and 'co'
+```js
 ...
 require('express-yield-bluebird')({globals: true});
 ...
 new Promise(...) //BlueBird Promise globally
 co.wrap(function* () {}) //bluebird-co wrapper globally
+```
 
 ### To define custom yield handler (in addition to bluebird-co ones)
 
@@ -72,4 +74,5 @@ usual way in the rest of your application.
 MIT
 
 Copyright (C) 2016 Denis Volokhovskiy
+
 Copyright (C) 2016 Nikolay Nemshilov (express-yields)
